@@ -17,8 +17,6 @@ function generateSignature(payload) {
     .update(queryString)
     .digest("hex");
 
-  console.log(queryString);
-
   return `${signature}&timestamp=${timestamp}`;
 }
 

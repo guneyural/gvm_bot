@@ -1,12 +1,12 @@
 const { makePublicRequest, makeSignedRequest } = require("./makeRequest");
 
-makePublicRequest("GET", "/time", { isim: "guney", soyisim: "ural" })
+makePublicRequest("GET", "/time")
   .then(({ data }) => {
     console.log(data);
   })
   .catch((err) => console.log(err));
 
-makeSignedRequest("GET", "/account", {})
+makeSignedRequest("GET", "/account")
   .then(({ data }) => {
     console.log(data);
   })
